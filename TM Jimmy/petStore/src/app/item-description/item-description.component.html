@@ -1,1 +1,14 @@
-<p>item-description works!</p>
+<h2>Product Details</h2>
+
+
+<div *ngIf="items">
+
+ <h3>{{ items.name }}</h3>
+
+ <h4>{{ items.price | currency }}</h4>
+
+ <p>{{ items.description }}</p>
+
+ <button (click)="addToCart()">Buy</button>
+
+</div>
