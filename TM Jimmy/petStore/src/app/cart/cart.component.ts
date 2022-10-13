@@ -9,22 +9,20 @@ import { CartService } from '../cart.service';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-  items: Array<IpetItems> =[];  
+  items: Array<IpetItems> =[]; 
   constructor(private cartservice: CartService) { }
-getTotal(){
-  this.cartservice.gettotal()
-}
+  //total = 0
+  getTotal(){
+    let total=0;
+    for(let item of this.items){
+     total += item.price ;
+    }
+    return total
+  };
 
   ngOnInit(): void {
-    this.items = this.cartservice.getItems()
+    this.items = this.cartservice.getItems();
+    //this.total = this.cartservice.gettotal();
+    
   }
-
-  /* get totalprice(){
-    return this.items.reduce(
-      (sum, product) => ({
-        item : 1,
-        price : sum.price + product.price}),
-        {item:1, price:0}
-    ).price
-  } */
 }

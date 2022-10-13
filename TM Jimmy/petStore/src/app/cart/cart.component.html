@@ -5,9 +5,9 @@
 
  <span>{{ item.name }} </span>
 
- <span>{{ item.price | currency }}</span>
-
+ <span>{{ item.price | currency:"EUR" }}</span>
+ 
 </div>
 <div>
-Price = {{ getTotal() }}
+    Price = {{ getTotal() | currency:"EUR" }}
 </div>
