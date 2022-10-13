@@ -1,0 +1,42 @@
+
+<h1>Create a new article</h1>
+<div class="container">
+  <div id="reviews"></div>
+</div>
+<br><br>
+<form [formGroup]="info" (ngSubmit)="onSubmit()">
+    <label>
+      First Name:<br>
+      <input type="text" formControlName="firstName">
+    </label>
+    <label>
+      Last Name:<br>
+      <input type="text" formControlName="lastName">
+    </label>
+    <label>
+      Image:<br>
+      <input type="text" formControlName="image">
+    </label>
+    <label>
+      Date:<br>
+      <input type="date" formControlName="date">
+    </label>
+    <label>
+      Email:<br>
+      <input type="text" formControlName="email">
+
+    </label>
+    <label>
+        Place:<br>
+        <input type="text" formControlName="place">
+  
+      </label>
+      <br><br>
+    <label>
+        your review:<br>
+        <textarea formControlName="review" cols="30" rows="10"></textarea>
+    </label>
+    <br><br>
+    <input type="submit" class="btn btn-primary" value="Submit">
+   </form>
+

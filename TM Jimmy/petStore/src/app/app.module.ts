@@ -7,6 +7,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { CartComponent } from './cart/cart.component';
 import { ItemListComponent } from './item-list/item-list.component';
 import { ItemDescriptionComponent } from './item-description/item-description.component';
+import { ContactComponent } from './contact/contact.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,11 +16,13 @@ import { ItemDescriptionComponent } from './item-description/item-description.co
     NavbarComponent,
     CartComponent,
     ItemListComponent,
-    ItemDescriptionComponent
+    ItemDescriptionComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

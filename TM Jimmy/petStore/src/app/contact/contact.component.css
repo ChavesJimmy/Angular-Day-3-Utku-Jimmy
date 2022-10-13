@@ -1,0 +1,14 @@
+.container {
+    text-align: center;
+    border: solid 5px;
+    color: chartreuse;
+    background-color: black;
+    margin: auto;
+    width: 500px;
+}
+
+form {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
